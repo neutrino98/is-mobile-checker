@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <script>
+        function getWidthAndHeight() {
+            document.getElementById("height").innerHTML = window.innerHeight
+            document.getElementById("width").innerHTML = window.innerWidth
+        }
+
+        function isMobile() {
+            if( navigator.userAgent.match(/Android/i)
+                || navigator.userAgent.match(/webOS/i)
+                || navigator.userAgent.match(/iPhone/i)
+                || navigator.userAgent.match(/iPad/i)
+                || navigator.userAgent.match(/iPod/i)
+                || navigator.userAgent.match(/BlackBerry/i)
+                || navigator.userAgent.match(/Windows Phone/i)
+                ){
+                    return true;
+                    document.getElementById("isMobile").innerHTML = "YES"
+                }
+                else {
+                    document.getElementById("isMobile").innerHTML = "NO"
+                }
+        }
+    </script>
+<body>
+    <h1>Width and height of screen</h1>
+    <button onclick="getWidthAndHeight()">get size</button>
+    <p>Height: <p id="height" /> </p>
+    <p>Width: <p id="width" /> </p>
+    <button onclick="isMobile()">Is mobile</button>
+    <p>Is mobile: <p id="isMobile"></p>
+</body>
+</html>
